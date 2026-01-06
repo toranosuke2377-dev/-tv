@@ -1,0 +1,2 @@
+            {/* Prefecture Search Section */}
+            <PrefectureSearch />
