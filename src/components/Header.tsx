@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Coins, LogIn, UserPlus, Menu, X } from "lucide-react";
+import { Coins, LogIn, UserPlus, Menu, X, Users, FileSearch } from "lucide-react";
 import { useState, useEffect } from "react";
 import { supabase } from "@/utils/supabase/client";
 import { User } from "@supabase/supabase-js";
@@ -92,15 +92,15 @@ export default function Header() {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="hidden lg:flex items-center gap-4">
+                    <div className="hidden xl:flex items-center gap-3">
                         {user ? (
                             <>
-                                <div className="text-sm font-bold text-slate-500 mr-2">
+                                <div className="text-sm font-bold text-slate-500 mr-2 whitespace-nowrap">
                                     {user.email}
                                 </div>
                                 <button
                                     onClick={handleLogout}
-                                    className="px-5 py-2.5 rounded-xl text-sm font-bold text-slate-600 hover:text-red-600 hover:bg-red-50 border border-slate-100 transition-all"
+                                    className="px-5 py-2.5 rounded-xl text-sm font-bold text-slate-600 hover:text-red-600 hover:bg-red-50 border border-slate-100 transition-all whitespace-nowrap"
                                 >
                                     ログアウト
                                 </button>
@@ -109,17 +109,32 @@ export default function Header() {
                             <>
                                 <Link
                                     href="/login"
-                                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-slate-600 hover:text-primary hover:bg-slate-50 border border-slate-100 transition-all"
+                                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-slate-600 hover:text-primary hover:bg-slate-50 border border-slate-100 transition-all whitespace-nowrap"
                                 >
                                     <LogIn className="w-4 h-4" />
                                     ログイン
                                 </Link>
                                 <Link
                                     href="/register"
-                                    className="flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-bold bg-secondary text-primary hover:bg-[#F0D56B] shadow-lg shadow-secondary/30 transition-all hover:scale-105 active:scale-95"
+                                    className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-secondary text-primary hover:bg-[#F0D56B] shadow-lg shadow-secondary/30 transition-all hover:scale-105 active:scale-95 whitespace-nowrap"
                                 >
                                     <UserPlus className="w-4 h-4" />
                                     新規会員登録
+                                </Link>
+                                <div className="h-8 w-px bg-slate-200 mx-1" />
+                                <Link
+                                    href="/experts"
+                                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-orange-500 hover:bg-orange-50 transition-all whitespace-nowrap"
+                                >
+                                    <Users className="w-4 h-4" />
+                                    専門家を探す
+                                </Link>
+                                <Link
+                                    href="/subsidies"
+                                    className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-emerald-600 hover:bg-emerald-50 transition-all whitespace-nowrap"
+                                >
+                                    <FileSearch className="w-4 h-4" />
+                                    補助金を探す
                                 </Link>
                             </>
                         )}
