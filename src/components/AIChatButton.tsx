@@ -52,7 +52,7 @@ export default function AIChatButton() {
                                             <User className="w-12 h-12 text-primary/40" />
                                         </div>
                                         {/* Stylized representation of the character based on image */}
-                                        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200')] bg-cover bg-center grayscale-[0.3] brightness-90 contrast-110" />
+                                        <div className="absolute inset-0 bg-[url('/images/anime_guide_character.png')] bg-cover bg-center grayscale-[0.3] brightness-90 contrast-110" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                                     </div>
                                 </div>
@@ -86,7 +86,7 @@ export default function AIChatButton() {
                             >
                                 {msg.role === 'ai' && (
                                     <div className="w-10 h-10 rounded-full bg-[#1A1C1E] flex items-center justify-center shrink-0 border border-primary/20 overflow-hidden shadow-md">
-                                        <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100')] bg-cover bg-center grayscale" />
+                                        <div className="w-full h-full bg-[url('/images/anime_guide_character.png')] bg-cover bg-center grayscale" />
                                     </div>
                                 )}
                                 <div className={cn(
@@ -137,7 +137,7 @@ export default function AIChatButton() {
                         <div className="absolute inset-0 bg-primary/30 rounded-full animate-ping" />
                         <div className="relative w-28 h-28 rounded-full flex items-center justify-center shadow-[0_20px_50px_-10px_rgba(0,0,0,0.5)] border-4 border-primary hover:scale-105 active:scale-95 transition-all duration-500 overflow-hidden bg-[#1A1C1E]">
                             <div className="w-full h-full relative">
-                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200')] bg-cover bg-center grayscale-[0.2] transition-all group-hover:grayscale-0 group-hover:scale-110" />
+                                <div className="absolute inset-0 bg-[url('/images/anime_guide_character.png')] bg-cover bg-center grayscale-[0.2] transition-all group-hover:grayscale-0 group-hover:scale-110" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                                 <div className="absolute bottom-2 inset-x-0 flex flex-col items-center">
                                     <span className="text-[10px] font-black text-white tracking-widest uppercase">Kanae</span>
