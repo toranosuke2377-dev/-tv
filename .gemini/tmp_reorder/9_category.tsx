@@ -1,0 +1,2 @@
+            {/* Category Navigation Section */}
+            <CategorySearch />
